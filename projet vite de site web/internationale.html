@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aboubacar sacko">
+    <title>LIVE NEWS</title>
+    <link rel="stylesheet" href="style - internationale.css">
+
+
+
+
+    <script>
+        // Tableau d'annonces
+        var annonces = [
+          {
+                                                  image: 'image/black-friday-5757751_1920.jpg',
+                       description: 'Annonce 1: Description de l\'annonce 1'
+          },
+          {
+                                           image: 'image/content-3755244_1920.jpg',
+                      description: 'Annonce 2: Description de l\'annonce 2'
+          },
+          {
+                                           image: 'image/social-media-marketing-5971028_1920.jpg',
+                   description: 'Annonce 3: Description de l\'annonce 3'
+          }, 
+          {
+                         image: 'image/social-media-marketing-5971028_1920.jpg',
+                                                description: 'Annonce 4: Description de l\'annonce 4'
+          },
+          {
+                         image: 'image/newspaper-2062088_1920.jpg',
+                description: 'Annonce 5: Description de l\'annonce 5'
+          },
+         
+                  
+        ];
+    
+        // Fonction pour afficher les annonces
+        function afficherAnnonces() {
+          var annoncesContainer = document.getElementById('annoncesContainer');
+          var index = 0; // Variable pour suivre l'index de l'annonce actuelle
+    
+          function changerAnnonce() {
+            // Réinitialiser l'index lorsqu'il atteint la fin du tableau
+            if (index === annonces.length) {
+              index = 0;
+            }
+    
+                               // Effacer le contenu du conteneur d'annonces
+                                                       annoncesContainer.innerHTML = '';
+    
+                    // Récupérer l'annonce actuelle
+                                       var annonce = annonces[index];
+    
+                                                    // Créer un élément div pour l'annonce
+            var annonceElement = document.createElement('div');
+                                                   annonceElement.className = 'annonce';
+    
+                                              // Créer un élément img pour l'image de l'annonce
+                                        var imageElement = document.createElement('img');
+                      imageElement.src = annonce.image;
+    
+            // Créer un élément p pour la description de l'annonce
+            var descriptionElement = document.createElement('p');
+            descriptionElement.textContent = annonce.description;
+    
+                         // Ajouter l'image et la description à l'élément de l'annonce
+            annonceElement.appendChild(imageElement);
+                                                  annonceElement.appendChild(descriptionElement);
+    
+                                      // Ajouter l'élément de l'annonce au conteneur d'annonces
+                         annoncesContainer.appendChild(annonceElement);
+    
+                                 // Incrémenter l'index pour afficher la prochaine annonce lors du prochain intervalle
+            index++;
+          }
+    
+                                              // Appeler la fonction pour changer l'annonce toutes les 5 secondes
+               setInterval(changerAnnonce, 5000);
+        }
+    0
+                  // Appeler la fonction pour afficher les annonces lorsque la page est chargée
+        window.onload = afficherAnnonces;
+      </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("search-input");
+    const searchButton = document.getElementById("search-button");
+    const searchResults = document.getElementById("search-results");
+  
+    searchButton.addEventListener("click", performSearch);
+  
+    function performSearch() {
+        const searchTerm = searchInput.value.trim();
+  
+        // Vous pouvez implémenter ici la logique de recherche côté client ou envoyer une requête au serveur.
+        // Dans cet exemple, nous affichons simplement le terme de recherche dans #search-results.
+        searchResults.innerHTML = `<p>Résultats de recherche pour : <strong>${searchTerm}</strong></p>`;
+    }
+  });
+  
+  </script>
+  
+
+
+
+
+</head>
+<body>
+ <div class="header">
+  <div class="logo"><img src="c:\Users\Toshiba\Pictures\Saved Pictures\live news-logos.jpeg" alt=""></div>
+    <h1 class="big-title">LIVE NEWS</h1>
+    <div class="menu">
+        <ol>
+            
+            <li><a href="actualité.html">actualité</a></li>
+            <li><a href="afrique.html">afrique</a></li>
+            <li><a href="internationale.html">internationale</a></li>
+            <li><a href="sports.html">sports</a></li>
+            <li><a href="sciences.html">sciences</a></li>
+            <li><a href="education.html">education</a></li>
+            
+            
+        </ol>
+        
+    </div>  
+ </div>
+
+ <div class="search-container">
+  <input type="search" id="search-input" placeholder="Rechercher...">
+  <button type="button" id="search-button">Rechercher</button>
+  
+  
+</div>
+
+<div id="search-results"></div>
+
+<!-- Conteneur pour les annonces -->
+ <div id="info">
+  <marquee behavior="scrol" direction="" ><p><span>ACTUALITE
+
+
+    PROGUIM</span> - Réseau des Professionnels Guinéens au Maroc Un Iftar collectif et une Table ronde............                        
+  <span>  Mercato PSG</span> : énorme révélation sur Kylian Mbappé et le Real Madrid</p></marquee>
+ </div> 
+
+ <div class="pub">
+    <p>annonces</p>
+
+ </div>
+ 
+<!-- Conteneur pour les annonces -->
+<div id="annoncesContainer">
+            
+</div>
+<h1>INTERNATIONALE</h1>
+
+<div class="proguim">
+  <img src="c:\Users\Toshiba\Downloads\340956939_545738381045377_1218819647308999041_n.jpg" alt="photo du president"><br><br>
+  <p id="infoproguim">Un événement marquant dans le cadre de l'Iftar et d'une Table ronde s'est déroulé le 15 avril à l'hôtel Ibis Agdal Rabat. Cette rencontre, axée sur "Le Professionnalisme Guinéen au Maroc, vecteur de la coopération Sud-Sud", a été enrichie par un exemple concret à travers les expériences d'une entreprise fondée et dirigée par un Guinéen au Maroc.
+
+    L'Iftar collectif et la Table ronde ont rassemblé diverses personnalités, notamment des diplomates guinéens et d'autres pays africains auprès du Royaume du Maroc, des membres éminents de la communauté guinéenne au Maroc, des professionnels guinéens, des responsables associatifs, des représentants de partis politiques, etc.
+    
+    La conférence inaugurale a été l'occasion pour le président de PROGUIM, M. Alhassane Camara, de louer la coopération entre la Guinée et le Maroc. L'événement a également été marqué par des hommages rendus pour les services exceptionnels à la communauté guinéenne au Maroc et pour leur contribution remarquable au rayonnement de la Guinée dans le pays, notamment à S.E.M. l'Ambassadeur de la République de Guinée près le Royaume du Maroc, feu Mme Aminata Touré (Fondatrice et ex-Directrice Générale de l'Association des Guinéens résidant au Maroc), feu M. Ignace Deen Camara (Fondateur et ex-Directeur Général de la Fondation et de l'Action Préventive des Guinéens résidant au Maroc), feu M. Mamadou Malado Barry (Ingénieur Géomètre Topographe, membre fondateur de PROGUIM), ainsi que plusieurs doyens de la Communauté Guinéenne au Maroc et M. Ibrahima III Sangaré (ancien président de PROGUIM et M. Mamadou Diallo (ancien SG de PROGUIM).
+    
+    Ces reconnaissances honorent les personnes qui se sont dévouées pour servir et contribuer de manière significative au développement de la communauté guinéenne au Maroc, ainsi que de la diaspora africaine en général. Merci de votre attention.</p>
+</div><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+<footer class="adress">
+  <p>site crée par Aboubacar sacko A0102</p><br>
+  <p><b><u>contact</u></b></p>
+  <address>
+  <a href="mailto:sackoaboubacar888@gmail.com">sackoaboubacar888@gmail.com</a><br>
+  <a href="tel:+212714872146">(+212) 714872146</a>
+  </address>
+  </footer>
+  
+
+
+
+    
+</body>
+</html>

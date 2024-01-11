@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aboubacar sacko">
+    <title>LIVE NEWS</title>
+    <link rel="stylesheet" href="style-actualité.css">
+
+
+
+
+    <script>
+        // Tableau d'annonces
+        var annonces = [
+          {
+                                                  image: 'image/black-friday-5757751_1920.jpg',
+                       description: 'Annonce 1: Description de l\'annonce 1'
+          },
+          {
+                                           image: 'image/content-3755244_1920.jpg',
+                      description: 'Annonce 2: Description de l\'annonce 2'
+          },
+          {
+                                           image: 'image/social-media-marketing-5971028_1920.jpg',
+                   description: 'Annonce 3: Description de l\'annonce 3'
+          }, 
+          {
+                         image: 'image/social-media-marketing-5971028_1920.jpg',
+                                                description: 'Annonce 4: Description de l\'annonce 4'
+          },
+          {
+                         image: 'image/newspaper-2062088_1920.jpg',
+                description: 'Annonce 5: Description de l\'annonce 5'
+          },
+
+         
+        ];
+    
+        // Fonction pour afficher les annonces
+        function afficherAnnonces() {
+          var annoncesContainer = document.getElementById('annoncesContainer');
+          var index = 0; // Variable pour suivre l'index de l'annonce actuelle
+    
+          function changerAnnonce() {
+            // Réinitialiser l'index lorsqu'il atteint la fin du tableau
+            if (index === annonces.length) {
+              index = 0;
+            }
+    
+                               // Effacer le contenu du conteneur d'annonces
+                                                       annoncesContainer.innerHTML = '';
+    
+                    // Récupérer l'annonce actuelle
+                                       var annonce = annonces[index];
+    
+                                                    // Créer un élément div pour l'annonce
+            var annonceElement = document.createElement('div');
+                                                   annonceElement.className = 'annonce';
+    
+                                              // Créer un élément img pour l'image de l'annonce
+                                        var imageElement = document.createElement('img');
+                      imageElement.src = annonce.image;
+    
+            // Créer un élément p pour la description de l'annonce
+            var descriptionElement = document.createElement('p');
+            descriptionElement.textContent = annonce.description;
+    
+                         // Ajouter l'image et la description à l'élément de l'annonce
+            annonceElement.appendChild(imageElement);
+                                                  annonceElement.appendChild(descriptionElement);
+    
+                                      // Ajouter l'élément de l'annonce au conteneur d'annonces
+                         annoncesContainer.appendChild(annonceElement);
+    
+                                 // Incrémenter l'index pour afficher la prochaine annonce lors du prochain intervalle
+            index++;
+          }
+    
+                                              // Appeler la fonction pour changer l'annonce toutes les 5 secondes
+               setInterval(changerAnnonce, 5000);
+        }
+                  // Appeler la fonction pour afficher les annonces lorsque la page est chargée
+        window.onload = afficherAnnonces;
+      </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("search-input");
+  const searchButton = document.getElementById("search-button");
+  const searchResults = document.getElementById("search-results");
+
+  searchButton.addEventListener("click", performSearch);
+
+  function performSearch() {
+      const searchTerm = searchInput.value.trim();
+
+      // Vous pouvez implémenter ici la logique de recherche côté client ou envoyer une requête au serveur.
+      // Dans cet exemple, nous affichons simplement le terme de recherche dans #search-results.
+      searchResults.innerHTML = `<p>Résultats de recherche pour : <strong>${searchTerm}</strong></p>`;
+  }
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+ <div class="header">
+<div class="logo"><img src="c:\Users\Toshiba\Pictures\Saved Pictures\live news-logos.jpeg" alt=""></div>
+    <h1 class="big-title">LIVE NEWS</h1>
+    <div class="menu">
+        <ol>
+            
+            <li><a href="actualité.html">actualité</a></li>
+            <li><a href="afrique.html">afrique</a></li>
+            <li><a href="internationale.html">internationale</a></li>
+            <li><a href="sports.html">sports</a></li>
+            <li><a href="sciences.html">sciences</a></li>
+            <li><a href="education.html">education</a></li>
+      
+          <script src="script.js"></script>
+            
+        </ol>
+        
+    </div>  
+ </div>
+
+ <div class="search-container">
+  <input type="search" id="search-input" placeholder="Rechercher...">
+  <button type="button" id="search-button">Rechercher</button>
+  <div id="search-results"></div>
+ </div>
+
+ <div id="search-results"></div>
+    
+
+<!-- Conteneur pour les annonces -->
+ <div id="info">
+  <marquee behavior="scrol" direction="" ><p> <span>ACTUALITE
+
+
+   PROGUIM</span> - Réseau des Professionnels Guinéens au Maroc Un Iftar collectif et une Table ronde.........                       
+    <span>Mercato PSG </span>: énorme révélation sur Kylian Mbappé et le Real Madrid</p></marquee>
+      
+ </div> 
+
+ <div class="pub">
+    <p>annonces</p>
+
+ </div>
+ 
+<!-- Conteneur pour les annonces -->
+<div id="annoncesContainer">
+            
+</div>
+
+<div class="titre">
+
+<h1 >ACTUALITE</h1>
+
+</div>
+
+<div class="proguim" rowspan="2">
+    <img src="c:\Users\Toshiba\Downloads\340956939_545738381045377_1218819647308999041_n.jpg" alt=""><br><br>
+     <a href="internationale.html#infoproguim">PROGUIM - Réseau des Professionnels Guinéens au Maroc
+    Un Iftar collectif et une Table ronde, autour du thème " le professionnel 𝐆𝐮𝐢𝐧𝐞́𝐞𝐧 au Maroc, auteur de la 𝐜𝐨𝐨𝐩𝐞́𝐫𝐚𝐭𝐢𝐨𝐧 sud-sud", étayé par un exemple édifiant à travers les expériences et témoignages d'une entreprise fondée et dirigée par un Guinéen au Maroc.
+    𝐓𝐡𝐞̀𝐦𝐞 𝐚𝐧𝐢𝐦𝐞́ par M.Thierno Aliou Bah, DIRECTEUR 𝐆𝐞́𝐧𝐞́𝐫𝐚𝐥 de la 𝐬𝐨𝐜𝐢𝐞́𝐭𝐞́ SECTOB,dont l'entreprise a 𝐞́𝐭𝐞́ mise 𝐚̀ l'honheur pour cette 𝐩𝐫𝐞𝐦𝐢𝐞̀𝐫𝐞 𝐞́𝐝𝐢𝐭𝐢𝐨𝐧.</a>
+</div>
+
+<div class="mbappe">
+  <img src="c:\Users\Toshiba\Downloads\dpaphotossix284477 (1).jpg" alt=""><br>
+  <a href="sports.html#article">Mercato PSG : énorme révélation sur Kylian Mbappé et le Real Madrid</a>
+</div>
+
+
+
+<div id="guinee">
+       <img src="c:\Users\Toshiba\Downloads\image incendi guinéé.jpg" alt="photo"><br><br>
+       <a href="afrique.html#guinee">Tragédie à Conakry : Un Incendie Dévastateur dans le Dépôt de Carburant Fait des Victimes</a>
+</div>
+
+<div id="carburant">
+       <img src="c:\Users\Toshiba\Downloads\TMI.jpg" alt="">
+       <a href="afrique.html#carburant">Pénurie de Carburant en Guinée : Les Répercussions Douloureuses de l'Explosion du Dépôt <br>
+      au Centre-Ville</a><br><br>
+</div>
+
+
+
+<div id="concours"> 
+  <img src="c:\Users\Toshiba\Downloads\pexels-photo-2982449.jpeg" alt="fac"><br>
+  <a href="education.html#concours">Concours d'admission à Polytechnique Paris : les candidats marocains obtiennent 70%  <br>
+    des quotas réservés aux étudiants étrangers</a>
+</div><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="adress">
+  <p>site crée par Aboubacar sacko A0102</p><br>
+  <p><b><u>contact</u></b></p>
+  <address>
+  <a href="mailto:sackoaboubacar888@gmail.com">sackoaboubacar888@gmail.com</a><br>
+  <a href="tel:+212714872146">(+212) 714872146</a>
+  </address>
+
+</footer>
+  
+     
+
+  
+
+
+    
+</body>
+</html>
